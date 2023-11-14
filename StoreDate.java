@@ -1,4 +1,4 @@
-public class LearnDate {
+public class StoreDate {
     public static void main(String[] args) {
         java.util.Date dl = new java.util.Date();
         System.out.println("util date :- "+dl);

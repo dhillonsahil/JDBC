@@ -4,13 +4,13 @@ public class RegisterJDBC {
     public static void main(String[] args) {
         try {
             // register driver
-            Driver dr = new Driver();
-            DriverManager.registerDriver(dr);
+            // Driver dr = new Driver();
+            // DriverManager.registerDriver(dr);
             System.out.println("Driver registered Successfully");
 
             // establish a connection
             // JDBC URL SYNTAX  :: <mainprotocol>:<subprotocol>:<subname>
-            String url="jdbc:mysql://localhost:3306/EnterpriseJava";
+            String url="jdbc:mysql://localhost:3306/students";
             String username="root";
             String password="1492";
 //             we are creating a object of class which implements Connection Interface and that class object is collected by the connection interface
@@ -25,7 +25,7 @@ public class RegisterJDBC {
             Statement statement = connection.createStatement();
 
             // execute query
-            String sqlQuery = "select sid,sname,sage,saddr from students";
+            String sqlQuery = "select sid,sname,sage,saddr from studentdata";
             ResultSet resultSet=statement.executeQuery(sqlQuery);
 
             // process the result
